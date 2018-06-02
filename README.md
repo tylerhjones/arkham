@@ -5,8 +5,6 @@ let runtime =
     .provider( provider here )
     .provider( provider here )
     
-    .newLifecycleStep()
-    
     .addRestResource()
       .context("/foo")
       .connector("")
@@ -14,6 +12,7 @@ let runtime =
       .filter(FilterObject.id)
       .filter(AnotherFilterObject.id)
       .exceptionMapper(Mapper.id)
+      .build()
       
     .addRestResource()
       .context("/bar")
@@ -27,10 +26,12 @@ let runtime =
       .filter(FilterObject.id)
       .filter(AnotherFilterObject.id)
       .exceptionMapper(Mapper.id)
+      .build()
       
-    .addRunnable(...)
-    .addExecution(..?)
-     .build();
+      // other goals
+    .addLifecycled(...?)
+    
+    .build();
 
 runtime.start();
 ````
