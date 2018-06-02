@@ -7,14 +7,14 @@ pub struct ObjectKey {
 }
 
 impl ObjectKey {
-    fn new(object_type: &str) -> ObjectKey {
+    pub fn new(object_type: &str) -> ObjectKey {
         ObjectKey {
             object_type: object_type.to_string(),
             named: "".to_string(),
         }
     }
 
-    fn named(&mut self, name: &str) {
+    pub fn named(&mut self, name: &str) {
         self.named = name.to_string()
     }
 }
