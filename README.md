@@ -1,7 +1,7 @@
 # Example Project Goals
 ````
 let runtime = 
-  BuilderRuntime::new()
+  Arkham::new()
     .provider( provider here )
     .provider( provider here )
     
